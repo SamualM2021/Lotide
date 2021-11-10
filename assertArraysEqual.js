@@ -17,8 +17,8 @@ const eqArrays = function(firstArray, secondArray) {
 };
 
 /**
- * This function asserts if the actual value is equivalent to the
- * expected value.
+ * This function asserts if the actual array is equivalent to the
+ * expected array.
  * @param {the actual array} actual
  * @param {the expected array} expected
  */
