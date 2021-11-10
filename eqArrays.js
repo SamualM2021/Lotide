@@ -1,3 +1,9 @@
+/**
+ * This function asserts if the actual value is equivalent to the
+ * expected value.
+ * @param {the actual value} actual
+ * @param {the expected value} expected
+ */
 const assertEqual = function(actual, expected) {
   const assertionPassedMessage = `💚💚💚 Assertion Passed: ${actual} === ${expected}`;
   const assertionFailedMessage = `💔💔💔 Assertion Failed: ${actual} !== ${expected}`;
@@ -8,6 +14,13 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+/**
+ * This function returns true if the given arrays are perfect
+ * matches of each other
+ * @param {the first array to check} firstArray
+ * @param {the second array to check} secondArray
+ * @returns boolean
+ */
 const eqArrays = function(firstArray, secondArray) {
   if (firstArray !== null && secondArray !== null) {
     const isSameLength = firstArray.length === secondArray.length;
