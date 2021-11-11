@@ -82,7 +82,6 @@ const runTests = function() {
   const firstArrayTestObject = { c: "1", d: ["2", 3] };
   const secondArrayTestObject = { d: ["2", 3], c: "1" };
   const thirdArrayTestObject = { c: "1", d: ["2", 3, 4] };
-  //DEV Note: this would be easier to do with an assertTrue and assertFalse
   assertTrue(eqObjects(firstTestObject, secondTestObject));
   assertFalse(eqObjects(firstTestObject, thirdTestObject));
   assertFalse(eqObjects(null, []));
