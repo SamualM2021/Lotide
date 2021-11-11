@@ -20,10 +20,12 @@ const assertEqual = function(actual, expected) {
  * @returns
  */
 const getHead = function(inputArray) {
-  return inputArray[0];
+  return (inputArray && inputArray.length) ? inputArray[0] : undefined;
 };
 
 const runTests = function() {
+  assertEqual(getHead(null), undefined);
+  assertEqual(getHead([]), undefined);
   assertEqual(getHead([5, 6, 7]), 5);
   assertEqual(getHead(["Hello", "Lighthouse", "Labs"]), "Hello");
 };
