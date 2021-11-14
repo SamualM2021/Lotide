@@ -51,21 +51,16 @@ const eqObjects = function(firstObject, secondObject) {
   }
 
   for (const item in firstObject) {
-
-    if (!!Object.getOwnPropertyDescriptors(firstObject, item) && !!Object.getOwnPropertyDescriptors(secondObject, item)) {
-      if (Object.getOwnPropertyNames(firstObject).length !== Object.getOwnPropertyNames(secondObject).length) {
+    if (Object.getOwnPropertyNames(firstObject).length !== Object.getOwnPropertyNames(secondObject).length) {
+      return false;
+    } else if (typeof firstObject[item] === 'object') {
+      if (!eqObjects(firstObject[item], secondObject[item])) {
         return false;
-      } else if (typeof firstObject[item] === 'object') {
-        if (!eqObjects(firstObject[item], secondObject[item])) {
-          return false;
-        }
-      } else {
-        if (firstObject[item] !== secondObject[item]) {
-          return false;
-        }
       }
     } else {
-      return false;
+      if (firstObject[item] !== secondObject[item]) {
+        return false;
+      }
     }
   }
 
