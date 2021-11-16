@@ -1,0 +1,1 @@
+exports.getHead = require('../utilityFunctions/head');
