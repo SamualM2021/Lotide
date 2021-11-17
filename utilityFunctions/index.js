@@ -6,3 +6,4 @@ exports.countOnly = require('../utilityFunctions/countOnly');
 exports.findKey = require('../utilityFunctions/findKey');
 exports.findKeyByValue = require('../utilityFunctions/findKeyByValue');
 exports.isEmpty = require('../utilityFunctions/isEmpty');
+exports.map = require('../utilityFunctions/map');
