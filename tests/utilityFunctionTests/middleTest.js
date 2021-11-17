@@ -1,14 +1,33 @@
-const assertions = require("../../assertions");
+const assert = require('chai').assert;
 const utilities = require("../../utilityFunctions");
 
-const runTests = function() {
-  assertions.assertArraysEqual(utilities.middle(null), []);
-  assertions.assertArraysEqual(utilities.middle([1]), []);
-  assertions.assertArraysEqual(utilities.middle([1,2]), []);
-  assertions.assertArraysEqual(utilities.middle([1, 2, 3]), [2]);
-  assertions.assertArraysEqual(utilities.middle([1, 2, 3, 4, 5]), [3]);
-  assertions.assertArraysEqual(utilities.middle([1, 2, 3, 4]), [2, 3]);
-  assertions.assertArraysEqual(utilities.middle([1, 2, 3, 4, 5, 6]), [3, 4]);
-};
+describe("#middle", () => {
+  it("returns [] for null", () => {
+    assert.deepEqual(utilities.middle(null), []);
+  });
 
-runTests();
+  it("returns [] for array of size 1", () => {
+    assert.deepEqual(utilities.middle([1]), []);
+  });
+
+  it("returns [] for array of size 2", () => {
+    assert.deepEqual(utilities.middle([1, 2]), []);
+  });
+
+  it("returns [2] for [1, 2, 3]", () => {
+    assert.deepEqual(utilities.middle([1, 2, 3]), [2]);
+  });
+
+  it("returns 3 for [1, 2, 3, 4, 5]", () => {
+    assert.deepEqual(utilities.middle([1, 2, 3, 4, 5]), [3]);
+  });
+
+  it("returns [2, 3] for [1, 2, 3, 4]", () => {
+    assert.deepEqual(utilities.middle([1, 2, 3, 4]), [2, 3]);
+  });
+
+  it("returns [3, 4] for [1, 2, 3, 4, 5 , 6]", () => {
+    assert.deepEqual(utilities.middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+  });
+});
+
