@@ -7,3 +7,4 @@ exports.findKey = require('../utilityFunctions/findKey');
 exports.findKeyByValue = require('../utilityFunctions/findKeyByValue');
 exports.isEmpty = require('../utilityFunctions/isEmpty');
 exports.map = require('../utilityFunctions/map');
+exports.takeUntil = require('../utilityFunctions/takeUntil');
