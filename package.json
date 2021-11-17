@@ -1,0 +1,26 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "This provides similar functionality to lodash",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamualM2021/Lotide.git"
+  },
+  "author": "Samual Martelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamualM2021/Lotide/issues"
+  },
+  "homepage": "https://github.com/SamualM2021/Lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
+  }
+}
