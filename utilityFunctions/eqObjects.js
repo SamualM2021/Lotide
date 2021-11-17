@@ -1,11 +1,4 @@
-/**
-* Helper function to check if object is empty
-* @param {the given object} object
-* @returns
-*/
-const isEmpty = function(object) {
-  return (object === null || object.length === 0);
-};
+const isEmpty = require('../utilityFunctions/isEmpty');
 
 /**
  * Returns true if both objects have identical keys with identical values

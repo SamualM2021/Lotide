@@ -15,7 +15,7 @@ const runTests = function() {
   assertions.assertFalse(utilities.eqObjects(firstTestObject, thirdTestObject));
   assertions.assertFalse(utilities.eqObjects(null, []));
   assertions.assertTrue(utilities.eqObjects(null, null));
-  assertions.assertTrue(utilities.eqObjects({}, {}));
+  assertions.assertFalse(utilities.eqObjects({}, {}));
   assertions.assertFalse(utilities.eqObjects(firstTestObject, thirdDeepTestObject));
   assertions.assertTrue(utilities.eqObjects(firstDeepTestObject, secondDeepTestObject));
   assertions.assertFalse(utilities.eqObjects(firstDeepTestObject, thirdDeepTestObject));
