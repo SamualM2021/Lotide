@@ -7,8 +7,9 @@ const eqArrays = require('../utilityFunctions/eqArrays');
 * @param {the expected array} expected
 */
 const assertArraysEqual = function(actual, expected) {
-  const assertionPassedMessage = `💚💚💚 Assertion Passed: ${actual} === ${expected}`;
-  const assertionFailedMessage = `💔💔💔 Assertion Failed: ${actual} !== ${expected}`;
+  const inspect = require('util').inspect;
+  const assertionPassedMessage = `💚💚💚 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`;
+  const assertionFailedMessage = `💔💔💔 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`;
   if (eqArrays(actual, expected)) {
     console.log(assertionPassedMessage);
   } else {
