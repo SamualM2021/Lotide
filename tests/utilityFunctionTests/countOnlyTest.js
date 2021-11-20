@@ -1,4 +1,4 @@
-const assertions = require("../../assertions");
+const assert = require('chai').assert;
 const utilities = require("../../utilityFunctions");
 
 const firstNames = [
@@ -15,11 +15,17 @@ const firstNames = [
 
 const firstResult = utilities.countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
-const runTests = function() {
-  assertions.assertEqual(firstResult["Jason"], 1);
-  assertions.assertEqual(firstResult["Karima"], undefined);
-  assertions.assertEqual(firstResult["Fang"], 2);
-  assertions.assertEqual(firstResult["Agouhanna"], undefined);
-};
-
-runTests();
+describe("#countOnly", () => {
+  it("counting jason should return 1", () => {
+    assert.equal(firstResult["Jason"], 1);
+  });
+  it("counting Karima should return undefined", () => {
+    assert.equal(firstResult["Karima"], undefined);
+  });
+  it("counting Fang should return 2", () => {
+    assert.equal(firstResult["Fang"], 2);
+  });
+  it("counting Agouhanna should return undefined", () => {
+    assert.equal(firstResult["Agouhanna"], undefined);
+  });
+});
