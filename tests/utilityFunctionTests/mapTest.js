@@ -1,4 +1,4 @@
-const assertions = require("../../assertions");
+const assert = require('chai').assert;
 const utilities = require("../../utilityFunctions");
 
 const bands = ["Linkin Park", "Evanescence", "Red Hot Chili Peppers", "D12", "Three Days Grace"];
@@ -14,10 +14,14 @@ const isInFavourites = function(band) {
   return favourites.includes(band);
 };
 
-const runTests = function() {
-  assertions.assertArraysEqual(utilities.map(bands, band => band.length), [11, 11, 21, 3, 16]);
-  assertions.assertArraysEqual(utilities.map(bands, band => band[0]), ["L", "E", "R", "D", "T"]);
-  assertions.assertArraysEqual(utilities.map(bands, band => isInFavourites(band)), [true, false, true, true, false]);
-};
-
-runTests();
+describe("#map", () => {
+  it("mapping the bands to their length should be [11, 11, 21, 3, 16]", () => {
+    assert.deepEqual(utilities.map(bands, band => band.length), [11, 11, 21, 3, 16]);
+  });
+  it("mapping the bands to their first character should be ['L', 'E', 'R', 'D', 'T']", () => {
+    assert.deepEqual(utilities.map(bands, band => band[0]), ["L", "E", "R", "D", "T"]);
+  });
+  it("mapping the bands to the isInFavourites check should be [true, false, true, true, false]", () => {
+    assert.deepEqual(utilities.map(bands, band => isInFavourites(band)), [true, false, true, true, false]);
+  });
+});
