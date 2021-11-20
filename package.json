@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "onesmartcookie",
   "version": "1.0.0",
   "description": "This provides similar functionality to lodash",
   "main": "index.js",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/SamualM2021/Lotide.git"
   },
-  "author": "Samual Martelli",
+  "author": "SMARTELLI",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SamualM2021/Lotide/issues"
